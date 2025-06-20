@@ -8,6 +8,10 @@ import SymptomChecker from './components/SymptomChecker';
 import Telehealth from './components/Telehealth';
 import AppointmentBooking from './components/AppointmentBooking';
 import MyAppointments from './components/MyAppointments';
+import UserProfile from './components/profile/UserProfile';
+import Settings from './components/settings/Settings';
+import MedicalRecords from './components/medical-records/MedicalRecords';
+import PatientDashboard from './components/dashboard/PatientDashboard';
 
 const AppContent: React.FC = () => {
   const { currentView } = useApp();
@@ -28,6 +32,14 @@ const AppContent: React.FC = () => {
         return <AppointmentBooking />;
       case 'appointments':
         return <MyAppointments />;
+      case 'profile':
+        return <UserProfile />;
+      case 'settings':
+        return <Settings />;
+      case 'medical-records':
+        return <MedicalRecords />;
+      case 'dashboard':
+        return <PatientDashboard />;
       default:
         return <Home />;
     }
